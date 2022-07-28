@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+      body {
+        display: grid;
+        grid-template-areas: 
+        'imgcontainer imgcontainer imgcontainer imgcontainer'
+        'navbar navbar navbar navbar'
+        'container1 container1 container1 container1'
+        'cc cc cc cc'
+        'textanimation textanimation textanimation textanimation'
+        'brand_container brand_container brand_container brand_container';
+      }
+      .imgcontainer{
+        /* width: 100vw; */
+        height: 100vh;
+        background-color: brown;
+        grid-area: imgcontainer;
+      }
+      #navbar {
+        /* width: 100vw; */
+        grid-area: navbar;
+        position: sticky;
+        z-index: 1;
+      }
+      /* Sticky class for navbar  */
+      .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+      .container1{
+        /* width: 99vw; */
+        height: 60vh;
+        background-color: aqua;
+        grid-area: container1;
+      }
+      p {
+        font-size: 50px;
+        font-weight: 200;
+        margin: 8px 30px;
+      }
+
+      .textbox1 {
+        display: inline-block;
+        background-color: whitesmoke;
+        margin: 100px 224px;
+        width: 900px;
+        height: 100vh;
+        border-radius: 20px;
+        box-shadow: 10px 10px 10px;
+      }
+      .textbox2{
+        /* display: flex; */
+        width: 500px;
+        height:60px;
+        background-color: whitesmoke;
+        margin: -750px 150px;
+        border-radius: 10px;
+      }
+      h{
+        font-size: 40px;
+        font-weight: 500;
+        margin: 2px 25px;
+      }
+      .container2{
+        /* width: 80vw; */
+        height: 50vh;
+        /* background-color: rgb(5, 227, 235); */
+        /* border: 2px solid black; */
+        margin: 50px 2px;
+        /* border-radius: 10px; */
+      }
+
+      h1{
+        display: inline-block;
+        width: 150px;
+        height: 70px;
+        margin: 2px 30px;
+        font-size: 15px;
+      }
+
+      .card{
+        display: inline-block;
+        height: 300px;
+        width: 250px;
+        /* border: 2px solid black; */
+        border-radius: 10px;
+        margin-top: 30px;
+        background-color: whitesmoke;
+      }
+
+      .card-img {
+        height: 150px;
+        width: 230px;
+        border-radius: 10px;
+        margin: 8px;
+      }
+      .card h {
+        font-size: 25px;
+        font-weight: 800;
+        margin: 2px 40px
+      }
+      .card p {
+        font-size: 15px;
+      }
+
+      #cardtag {
+        width: 150px;
+        margin-left: 80px;
+        margin-top: -7px;
+        padding: 4px 13px;
+      }
+
+      #carouselitem:first-child {
+        margin-left: 70px;
+      }
+      .camsecimg {
+        position: relative;
+        height: 380px;
+        width: 896px;
+      }
+      .text1 {
+        color: white;
+        position: absolute;
+        top: 95px;
+        left: 20px;
+        font-size: 52px;
+        /* font-family: 'Anton', sans-serif; */
+      }
+      .text2 {
+        color: white;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 75px;
+        font-weight: 700;
+        /* font-family: 'Anton', sans-serif; */
+      }
+      .text3 {
+        color: white;
+        position: absolute;
+        top: 70%;
+        left: 68%;
+        transform: translate(-50%, -50%);
+        font-size: 35px;
+        font-weight: 700;
+        /* font-family: 'Anton', sans-serif; */
+      }
+      .txt1 {
+        color: black;
+        /* position: absolute; */
+        /* top: 20px; */
+        /* left: 50px; */
+        /* transform: translate(-50%, -50%); */
+        font-size: 20px;
+        margin: 10px 210px;
+      }
+
+      .infotab {
+        width: 60vw;
+        height: 130px;
+        border: 1px solid black;
+        margin: 2px 40px;
+        border-radius: 10px;
+      }
+
+      .dest-tab{
+        display: inline-block;
+        height: 130px;
+        width: 30vw;
+        border-right: 1px solid black;
+      }
+      .date-tab{
+        display: inline-block;
+        height: 130px;
+        width: 15vw;
+        border-right: 1px solid black;
+      }
+      .filter-tab{
+        display: inline-block;
+        height: 130px;
+        width: 14vw;
+      }
+      .category_container{
+        background-color: aqua;
+        border-radius: 10px;
+        margin: 125px 60px;
+        width: 90vw;
+        height: 2vh;
+        margin-top: 70vh;
+        grid-area: cc;
+      }
+      .btn-group {
+        padding: 0px 200px;
+      }
+      #cat_button {
+        width: 58vw;
+        background-color: aqua;
+        border: none;
+        font-size: 25px;
+        color: black;
+      }
+      #cat_dropdown{
+        width: 90vw;
+        padding: 2px 10px;
+        /* grid-template-areas: 'dc1 dc2 dc3 dc4'; */
+      }
+    .dropdown_container{
+      display: inline-block;
+      width: 20vw;
+      height: 80px;
+      /* border: 2px solid black; */
+    }
+    #dc1{margin-left:65px;}
+    .brand_container {
+      display: grid;
+      margin: auto;
+      margin-bottom: 100px;
+      width: 95vw;
+      height: 50vh;
+      background-color: rgb(237 234 232);
+      grid-area: brand_container;
+      grid-template-areas: 
+      'bc1 bc1 bc1 bc2'
+      'bc1 bc1 bc1 bc3';
+      margin-top: 450px;
+    }
+    .bcontainer1{
+      width: 60vw;
+      height: 50vh;
+      grid-area: bc1;
+    }
+    .bcontainer2{
+      display: inline-block;
+      width: 35vw;
+      height: 25vh;
+      /* background-color: aqua; */
+      grid-area: bc2;
+    }
+    .bcontainer3{
+      display: inline-block;
+      width: 35vw;
+      height: 25vh;
+      /* background-color: rgb(0, 255, 0); */
+      grid-area: bc3;
+    }
+    .First_img {
+      margin: 0px;
+      width: 60vw;
+      height: 50vh;
+    }
+    .Second_img {
+      margin: 0px;
+      width: 35vw;
+      height: 25vh;
+    }
+    /* #rproduct_container{
+      grid-area: rb;
+    }
+    .product_buckets{
+      margin: 15px;
+      width: 29vw;
+      height: 42vh;
+      display: inline-block;
+      background-color: white;
+    } */
+
+    /* text animations styling  */
+    #container {
+      
+      grid-area: textanimation;
+        /* position: absolute; */
+        margin: auto;
+        width: 95vw;
+        height: 80pt;
+
+        filter: url(#threshold) blur(0.6px);
+    }
+
+    #text1,
+    #text2 {
+        z-index: 0.9;
+        position: absolute;
+        /* top: 300px; */
+        left: 10px;
+        width: 100%;
+        display: inline-block;
+        margin-top: 72px;
+        font-family: 'Righteous', cursive;
+        font-size: 150pt;
+
+        text-align: center;
+
+        user-select: none;
+    }
+    .animate-charcter
+    { 
+      text-transform: uppercase;
+      background-image: linear-gradient(
+        -225deg,
+        #231557 0%,
+        #44107a 29%,
+        #ff1361 67%,
+        #fff800 100%
+      );
+      background-size: auto auto;
+      background-clip: border-box;
+      background-size: 200% auto;
+      color: #fff;
+      background-clip: text;
+      /* text-fill-color: transparent; */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textclip 2s linear infinite;
+      display: inline-block;
+          font-size: 190px;
+    }
+
+    @keyframes textclip {
+      to {
+        background-position: 200% center;
+      }
+    }
+    #Video {
+      width: 95vw;
+      height: 80vh;
+      background-color: black;
+    }
+    </style>
+</head>
+<body>
+  {% load static %}
+  <div class="imgcontainer">
+    <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="true" style = "height: 100vh;">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src ='{%static "shop/slide1.jpg" %}' class="d-block w-100" alt="..."  style = "height: 100vh;">
+        </div>
+        <div class="carousel-item">
+          <img src ='{%static "shop/slide1.jpg" %}' class="d-block w-100" alt="..." style = "height: 100vh;">
+        </div>
+        <div class="carousel-item">
+          <img src ='{%static "shop/slide1.jpg" %}' class="d-block w-100" alt="..." style = "height: 100vh;">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+    <nav class="navbar navbar-expand-lg bg-dark" id = "navbar" >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#" style = "color: white">Planurpic</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                  Login
+                </button>
+                <form class="dropdown-menu p-4">
+                  <div class="mb-3">
+                    <label for="exampleDropdownFormEmail2" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleDropdownFormPassword2" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+                  </div>
+                  <div class="mb-3">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="dropdownCheck2">
+                      <label class="form-check-label" for="dropdownCheck2">
+                        Remember me
+                      </label>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Sign in</button>
+                </form>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search" style = "width: 500px">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+  <div class="container1">
+    <div class="textbox1">
+      <p>for your picture perfect planning ! </p> 
+      <div class="container2">
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Camera's and equipments </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">plan your shoot! </button>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <!-- cameras section  -->
+            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+              <!-- carousel -->
+                  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" style = "height: 400px;">
+                    <div class="carousel-indicators">
+
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 0"></button>
+                      {% for i in range %}
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{forloop.counter}}" aria-label="Slide {{forloop.counter}}"></button>
+                      {% endfor %}                  
+                    </div>
+                    <div class="carousel-inner">
+                        <div id = "carouselactive" class="carousel-item active">
+                                <img class = "camsecimg" src="{%static 'shop/camsec.jpg' %}" alt=""> 
+                                <div class="text1"> Browse our wide range of</div>
+                                <div class="text2"> Camera's </div>
+                                <div class="text3">and Equipments. </div>
+                        </div>
+
+                      <div id = "carouselitem" class="carousel-item">
+                                <div class="card">
+                                  <img src="/media/{{myproducts.0.product_image}}" alt="" class="card-img">
+                                  <div class="card-inner">
+                                    <img class = "cardimg"src="" alt="">
+                                    <h> {{myproducts.0.product_name|truncatechars:10}}</h>
+                                    <p> {{myproducts.0.product_desc|truncatechars:40}} ..</p>
+                                  </div>
+                                  <a id = "cardtag" type="button" class="btn btn-outline-primary">Add to cart</a>
+                              </div>
+                              {% for x in myproducts|slice:"1:6" %}
+
+                                  <div class="card">
+                                    <img src="/media/{{x.product_image}}" alt="" class="card-img">
+                                    <div class="card-inner">
+                                      <img class = "cardimg"src="" alt="">
+                                      <h>{{x.product_name|truncatechars:10}}</h>
+                                      <p> {{ x.product_desc|truncatechars:40}} </p>
+                                    </div>
+                                    <a id = "cardtag" type="button" class="btn btn-outline-primary">Add to cart</a>
+                                </div>
+                            {% if forloop.counter|divisibleby:2 and forloop.counter > 0 and not forloop.last%}
+                              
+                              </div>
+                              <div id = "carouselitem" class="carousel-item">
+                            {% endif %}
+                            {% endfor %}
+                          </div>
+                    </div>
+                      
+                    <button style = "width: 4%;" class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button style = "width: 4%;" class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+             </div>
+            <!-- shoot section  -->
+            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0"> 
+                <div class="txt1">Need a photographer? <br> Just tell us where and when. </div> 
+                <div class="infotab">
+                    <div class="dest-tab">
+                        Goa
+                    </div>
+                    <div class="date-tab">
+                        12/3/2022
+                    </div>
+                    <div class="filter-tab">
+                        rate = 12000.
+                    </div>
+                </div>
+            </div>
+            
+          </div>
+        </div>
+    </div>
+    <div class="textbox2">
+      <h> One stop destination,</h> 
+    </div>
+  </div>
+
+  <!-- categories display  -->
+
+ <div class="category_container">
+  <div class="btn-group">
+    <button type="button" class="btn btn-secondary" id="cat_button">Shop From our wide range of Categories</button>
+    <button style = "background-color: aqua; border: none; font-size: 20px;" type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
+      <span class="visually-hidden">Toggle Dropdown</span>
+    </button>
+    <ul id = "cat_dropdown" class="dropdown-menu" aria-labelledby="dropdownMenuReference">
+      <div class="dropdown_container" id = "dc1">
+        {% for x in Categories %}
+        <li><a class="dropdown-item" href="#">{{x.cat_name}}</a></li>
+        {% if forloop.counter|divisibleby:2 and not forloop.last %}
+         </div>
+         <div class="dropdown_container">
+        {% endif %}
+        <!-- <li><a class="dropdown-item" href="#">{{x.cat_name}}</a></li> -->
+        {% endfor %}
+        </div>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="#">Separated link</a></li>
+    </ul>
+  </div>
+ </div>
+ 
+ <div class="brand_container">
+  <div class="bcontainer1"> <a href="http://127.0.0.1:8000/shop/PV?b_name=Nikon"><img src='{%static "shop/Nikon.png" %}' alt="" class="First_img"></a></div>
+  <div class="bcontainer2"> <a href="http://127.0.0.1:8000/shop/PV"><img src='{%static "shop/Cannon.png" %}' alt="" class="Second_img"></a></div>
+  <div class="bcontainer3"> <a href="http://127.0.0.1:8000/shop/PV"><img src='{%static "shop/RED.png" %}' alt="" class="Second_img"></a></div>
+ </div>
+
+  <!-- text animation conatiner  -->
+  <div id="container">
+    <video id = "Video" autoplay muted>
+      <source src = '{%static "shop/Video.mp4" %}' type = "video/mp4">
+    </video>
+    <span id="text1" class="animate-charcter"></span>
+    <span id="text2" class="animate-charcter"></span>
+  </div>
+
+  <svg id="filters">
+      <defs>
+          <filter id="threshold">
+              <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0
+                    0 1 0 0 0
+                    0 0 1 0 0
+                    0 0 0 255 -140" />
+          </filter>
+      </defs>
+  </svg>
+
+<!-- Sticky navbar js -->
+    <script>
+          // When the user scrolls the page, execute myFunction
+        window.onscroll = function() {myFunction()};
+
+        // Get the navbar
+        var navbar = document.getElementById("navbar");
+
+        // Get the offset position of the navbar
+        var sticky = navbar.offsetTop;
+
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        }
+    </script>
+
+  <!-- Js for the text animations.  -->
+  <script>
+    const elts = {
+        text1: document.getElementById("text1"),
+        text2: document.getElementById("text2")
+    };
+    
+    const texts = [
+        "BUY",
+        "OR",
+        "RENT",
+        "FROM",
+        "THE",
+        "BEST",
+        "THERE",
+        "IS",
+    ];
+    
+    const morphTime = 1;
+    const cooldownTime = 1;
+    
+    let textIndex = texts.length - 1;
+    let time = new Date();
+    let morph = 0;
+    let cooldown = cooldownTime;
+    
+    elts.text1.textContent = texts[textIndex % texts.length];
+    elts.text2.textContent = texts[(textIndex + 1) % texts.length];
+    
+    function doMorph() {
+        morph -= cooldown;
+        cooldown = 0;
+    
+        let fraction = morph / morphTime;
+    
+        if (fraction > 1) {
+            cooldown = cooldownTime;
+            fraction = 1;
+        }
+    
+        setMorph(fraction);
+    }
+    
+    function setMorph(fraction) {
+        elts.text2.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
+        elts.text2.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
+    
+        fraction = 1 - fraction;
+        elts.text1.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
+        elts.text1.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
+    
+        elts.text1.textContent = texts[textIndex % texts.length];
+        elts.text2.textContent = texts[(textIndex + 1) % texts.length];
+    }
+    
+    function doCooldown() {
+        morph = 0;
+    
+        elts.text2.style.filter = "";
+        elts.text2.style.opacity = "100%";
+    
+        elts.text1.style.filter = "";
+        elts.text1.style.opacity = "0%";
+    }
+    
+    function animate() {
+        requestAnimationFrame(animate);
+    
+        let newTime = new Date();
+        let shouldIncrementIndex = cooldown > 0;
+        let dt = (newTime - time) / 1000;
+        time = newTime;
+    
+        cooldown -= dt;
+    
+        if (cooldown <= 0) {
+            if (shouldIncrementIndex) {
+                textIndex++;
+            }
+    
+            doMorph();
+        } else {
+            doCooldown();
+        }
+    }
+    
+    animate();
+</script>
+</body>
+</html>
