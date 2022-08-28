@@ -24,3 +24,9 @@ class Product(models.Model):
 
     class Meta:
         ordering = ['product_name']
+
+class Users(models.Model):
+    user_id = models.AutoField
+    user_name = models.CharField(max_length=50)
+    user_password = models.CharField(max_length=8)
+    
