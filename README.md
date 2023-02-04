@@ -6,7 +6,7 @@ Website uses Django as a backend and mysqlite as a default database.
 Fullfelged Backend ready website with user authentication and product database. 
 
 # Output
-https://user-images.githubusercontent.com/98212051/216752877-3ab69cc4-b5e0-417c-92a5-de40c1c00c17.mp4          
+![home_page_AdobeExpress](https://user-images.githubusercontent.com/98212051/216753255-5485730d-d8e6-4800-840a-921c60bb7ac9.gif)       
 Home page.
 
 https://user-images.githubusercontent.com/98212051/216752927-80f3cf4d-bd39-40cc-add3-13f08d37e5e1.mp4           
