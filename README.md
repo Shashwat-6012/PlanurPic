@@ -10,7 +10,7 @@ Fullfelged Backend ready website with user authentication and product database.
   ![home_page_AdobeExpress](https://user-images.githubusercontent.com/98212051/216753255-5485730d-d8e6-4800-840a-921c60bb7ac9.gif)       
                                                          
 # Login functionality
-  ![login_AdobeExpress](https://user-images.githubusercontent.com/98212051/216753420-298cd9f7-afb6-457c-91a4-e925973b25be.gif
+  ![login_AdobeExpress](https://user-images.githubusercontent.com/98212051/216753420-298cd9f7-afb6-457c-91a4-e925973b25be.gif)
                                                           
 # signin and signout functionality                             
   ![signup_and_signout_AdobeExpress](https://user-images.githubusercontent.com/98212051/216753549-514503f9-125a-4d3a-87eb-ea612f6a51db.gif)
